@@ -12,7 +12,7 @@ function Product({ id, title, price, description, category, image }) {
   };
 
   return (
-    <div className=" relative flex flex-col  bg-white z-30 p-10 m-5 space-y-2 ">
+    <div className=" relative flex flex-col   bg-white z-30 p-10 m-5 space-y-2 ">
       <div className="flex flex-row  text-xs   ">
         <div className="flex-grow"></div>
         <p className=" flex-none text-gray-500 italic">{category}</p>
@@ -24,7 +24,9 @@ function Product({ id, title, price, description, category, image }) {
 
       <div className="relative  flex-col space-y-5  ">
         <h4 className="text-md font-bold flex">{title}</h4>
-        <p className="text-sm text-gray-500 hover:text-black">{description}</p>
+        <p className="text-sm text-gray-500 hover:text-black md:truncate">
+          {description}
+        </p>
         <ReactStars
           count={5}
           onChange={ratingChanged}
