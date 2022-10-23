@@ -50,7 +50,7 @@ function Header() {
         </div>
         {/* Bottom navigation */}
       </div>
-      <div className="bg-pink-400 flex items-center text-white space-x-3 px-5 text-sm">
+      <div className="bg-pink-400 flex items-center text-white space-x-3 px-5 text-sm md:text-[10px]">
         <p className="link flex items-center">
           <Bars3Icon className="h-10  mr-1 " />
           All
