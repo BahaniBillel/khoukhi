@@ -11,6 +11,23 @@ import {
 function Header() {
   return (
     <header className="">
+      {/* Top navigation */}
+      <div className="bg-pink-400 flex items-center text-white space-x-3 px-5 md:px-40 text-sm md:text-[10px]">
+        <p className="link flex items-center">
+          <Bars3Icon className="h-10  mr-1 " />
+          All
+        </p>
+
+        <p className="link">Prime Video</p>
+        <p className="link">Khoukhi Business</p>
+        <p className="link">Today's Deals</p>
+        <p className="link hidden lg:inline-flex">Elocronics</p>
+        <p className="link hidden lg:inline-flex">Food & Grocery</p>
+        <p className="link hidden lg:inline-flex">Prime</p>
+        <p className="link hidden lg:inline-flex">Buy Again</p>
+        <p className="link hidden lg:inline-flex">Shopper Toolkit</p>
+        <p className="link hidden lg:inline-flex">Health & Personal Care</p>
+      </div>
       <div className="h-20 bg-white w-screen shadow-sm px-5 flex flex-row items-center flex-grow py-2 sm:flex-grow ">
         <div className="w-24 h-24">
           <Image src={Logo} alt="Vercel Logo" layout="responsive" />
@@ -48,23 +65,6 @@ function Header() {
             </p>
           </div>
         </div>
-        {/* Bottom navigation */}
-      </div>
-      <div className="bg-pink-400 flex items-center text-white space-x-3 px-5 text-sm md:text-[10px]">
-        <p className="link flex items-center">
-          <Bars3Icon className="h-10  mr-1 " />
-          All
-        </p>
-
-        <p className="link">Prime Video</p>
-        <p className="link">Khoukhi Business</p>
-        <p className="link">Today's Deals</p>
-        <p className="link hidden lg:inline-flex">Elocronics</p>
-        <p className="link hidden lg:inline-flex">Food & Grocery</p>
-        <p className="link hidden lg:inline-flex">Prime</p>
-        <p className="link hidden lg:inline-flex">Buy Again</p>
-        <p className="link hidden lg:inline-flex">Shopper Toolkit</p>
-        <p className="link hidden lg:inline-flex">Health & Personal Care</p>
       </div>
     </header>
   );
