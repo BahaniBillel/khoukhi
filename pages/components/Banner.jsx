@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import firstImage from "../images/1.jpg";
@@ -8,26 +8,32 @@ import promo from "../images/promo2.jpg";
 import Image from "next/image";
 import { HomeIcon, TrophyIcon, WrenchIcon } from "@heroicons/react/24/outline";
 
-
 function Banner() {
-
-const [shown, notShown]=useState(false);
-function showMenu(){
-  alert('this is menu')
-}
-
-
+  const [shown, setShown] = useState(false);
+  let visible = "visible";
+  function showMenu() {
+    setShown(true);
+  }
+  function hideMenu() {
+    setShown(false);
+  }
   return (
-    <div className="  md:grid md:grid-cols-4 md:h-[476px] w-full   gap-2  md:grid-flow-row-dense p-2 text-xs md:mb-28  overflow-hidden">
+    <div className=" relative  md:grid md:grid-cols-4 md:h-[476px] w-full   gap-2  md:grid-flow-row-dense p-2 text-xs md:mb-28  overflow-hidden">
       <div className="col-span-1 bg-white md:rounded-md p-2 shadow-md">
         <nav>
-          <div className="mb-4 py-1 pl-1 font-bold cursor-pointer" onMouseOver={showMenu}>
+          <div
+            className="mb-4 py-1 pl-1 font-bold cursor-pointer"
+            onMouseOver={showMenu}
+            onMouseLeave={hideMenu}
+          >
             Categories
           </div>
           <ul className="">
             <li className="flex flex-row space-x-1  py-2 hover:shadow-md pl-1 hover:scale-105 hover:font-semibold cursor-pointer">
               <HomeIcon className="text-xs h-4 text-gray-600 hover:text-pink-700 " />
-              <p className="tracking-wider text-gray-900 hover:text-pink-700 ">Home</p>
+              <p className="tracking-wider text-gray-900 hover:text-pink-700 ">
+                Home
+              </p>
             </li>
             <li className="flex flex-row space-x-1 py-2 hover:shadow-md pl-1 hover:scale-105 hover:font-semibold cursor-pointer ">
               <TrophyIcon className="text-xs h-4 text-gray-600 " />
@@ -115,6 +121,16 @@ function showMenu(){
       <div className="col-span-1 bg-white md:rounded-md p-2 shadow-md">
         right
       </div>
+
+      {shown && (
+        <div
+          className={`absolute left-36 top-5 w-80 h-60 rounded-dm shadow-md bg-red-500 ${
+            shown ? visible : invisible
+          }`}
+        >
+          megamenu
+        </div>
+      )}
     </div>
   );
 }
