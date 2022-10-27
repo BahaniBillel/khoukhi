@@ -1,6 +1,10 @@
+import { HomeIcon, TrophyIcon, WrenchIcon } from "@heroicons/react/24/outline";
+
+
 export const links = [
     {
       name: "Men",
+      icon:<WrenchIcon className="text-xs h-4 text-gray-600 mr-1" />,
       submenu: true,
       sublinks: [
         {
@@ -23,45 +27,18 @@ export const links = [
             { name: "formal shirts", link: "/" },
           ],
         },
-        {
-          Head: "innerwear",
-          sublink: [
-            { name: "T-shirt", link: "/" },
-            { name: "Casual shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-          ],
-        },
+       
   
-        {
-          Head: "sleepwear",
-          sublink: [
-            { name: "T-shirt", link: "/" },
-            { name: "Casual shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-          ],
-        },
-        {
-          Head: "footwear",
-          sublink: [
-            { name: "T-shirt", link: "/" },
-            { name: "Casual shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-          ],
-        },
+        
       ],
     },
     {
       name: "Women",
+      icon:<HomeIcon className="text-xs h-4 text-gray-600 mr-1 " />,
       submenu: true,
       sublinks: [
         {
-          Head: "Topwear",
+          Head: "wTopwear",
           sublink: [
             { name: "T-shirt", link: "/" },
             { name: "Casual shirts", link: "/" },
@@ -80,45 +57,19 @@ export const links = [
             { name: "formal shirts", link: "/" },
           ],
         },
-        {
-          Head: "innerwear",
-          sublink: [
-            { name: "T-shirt", link: "/" },
-            { name: "Casual shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-          ],
-        },
+        
   
-        {
-          Head: "sleepwear",
-          sublink: [
-            { name: "T-shirt", link: "/" },
-            { name: "Casual shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-          ],
-        },
-        {
-          Head: "footwear",
-          sublink: [
-            { name: "T-shirt", link: "/" },
-            { name: "Casual shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-          ],
-        },
+      
+       
       ],
     },
     {
       name: "Kid's",
+      icon:<TrophyIcon className="text-xs h-4 text-gray-600 mr-1 " />,
       submenu: true,
       sublinks: [
         {
-          Head: "Topwear",
+          Head: "kTopwear",
           sublink: [
             { name: "T-shirt", link: "/" },
             { name: "Casual shirts", link: "/" },
@@ -137,37 +88,9 @@ export const links = [
             { name: "formal shirts", link: "/" },
           ],
         },
-        {
-          Head: "innerwear",
-          sublink: [
-            { name: "T-shirt", link: "/" },
-            { name: "Casual shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-          ],
-        },
+       
   
-        {
-          Head: "sleepwear",
-          sublink: [
-            { name: "T-shirt", link: "/" },
-            { name: "Casual shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-          ],
-        },
-        {
-          Head: "footwear",
-          sublink: [
-            { name: "T-shirt", link: "/" },
-            { name: "Casual shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-            { name: "formal shirts", link: "/" },
-          ],
-        },
+        
       ],
     },
   ];

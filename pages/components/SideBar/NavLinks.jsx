@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import  Link  from "next/link";
 import { links } from "./Mylinks";
+import NavigationBanner from "../../images/banner-navigation2.png";
+import Image from "next/image";
+
 
 const NavLinks = () => {
   const [heading, setHeading] = useState("");
@@ -11,12 +14,14 @@ const NavLinks = () => {
         <div>
           <div className="px-3 text-left md:cursor-pointer group">
             <h1
-              className="py-7 flex justify-between items-center md:pr-0 pr-5 group"
+              className="py-2 flex justify-start   items-center md:pr-0 pr-5  group"
               onClick={() => {
                 heading !== link.name ? setHeading(link.name) : setHeading("");
                 setSubHeading("");
               }}
             >
+              
+              {link.icon} 
               {link.name}
               <span className="text-xl md:hidden inline">
                 <ion-icon
@@ -30,24 +35,25 @@ const NavLinks = () => {
               </span>
             </h1>
             {link.submenu && (
-              <div>
-                <div className="absolute top-20 hidden group-hover:md:block hover:md:block">
+              <div className="">
+                <div className="absolute top-20 left-20 hidden group-hover:md:block hover:md:block  ">
                   <div className="py-3">
                     <div
                       className="w-4 h-4 left-3 absolute 
                     mt-1 bg-white rotate-45"
                     ></div>
                   </div>
-                  <div className="bg-white p-5 grid grid-cols-3 gap-10">
+                  <div className="bg-white p-5 grid grid-cols-10 gap-10 ">
                     {link.sublinks.map((mysublinks) => (
                       <div>
-                        <h1 className="text-lg font-semibold">
+                        <h1 className="text-sm font-semibold border border-b-1  border- border-solid">
+                          
                           {mysublinks.Head}
                         </h1>
                         {mysublinks.sublink.map((slink) => (
-                          <li className="text-sm text-gray-600 my-2.5">
+                          <li className="text-xs text-gray-600 my-2.5">
                             <Link
-                              to={slink.link}
+                              href={slink.link}
                               className="hover:text-primary"
                             >
                               {slink.name}
@@ -56,11 +62,25 @@ const NavLinks = () => {
                         ))}
                       </div>
                     ))}
+                    <div className=" col-span-8 bg-white">
+                    <Image src={NavigationBanner} alt="Vercel Logo" layout="responsive" />
+                    </div>
                   </div>
                 </div>
               </div>
             )}
           </div>
+
+
+
+
+
+
+
+
+
+
+
           {/* Mobile menus */}
           <div
             className={`
@@ -98,7 +118,7 @@ const NavLinks = () => {
                   >
                     {slinks.sublink.map((slink) => (
                       <li className="py-3 pl-14">
-                        <Link to={slink.link}>{slink.name}</Link>
+                        <Link href={slink.link}>{slink.name}</Link>
                       </li>
                     ))}
                   </div>
@@ -106,6 +126,9 @@ const NavLinks = () => {
               </div>
             ))}
           </div>
+
+
+
         </div>
       ))}
     </>
