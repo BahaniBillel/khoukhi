@@ -1,9 +1,9 @@
-import { HomeIcon, TrophyIcon, WrenchIcon } from "@heroicons/react/24/outline";
+import { HomeIcon, TrophyIcon, WrenchIcon  } from "@heroicons/react/24/outline";
 
 
 export const links = [
     {
-      name: "Men",
+      name: "Casual",
       icon:<WrenchIcon className="text-xs h-4 text-gray-600 mr-1" />,
       submenu: true,
       sublinks: [

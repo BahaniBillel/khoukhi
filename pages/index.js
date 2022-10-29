@@ -14,7 +14,7 @@ export default function Home({ products }) {
       </Head>
 
       <Header />
-      <main className="max-w-screen-2xl mx-auto md:px-40">
+      <main className="max-w-screen-2xl mx-auto md:px-36">
         {/* <banner */}
         <Banner />
         {/* product feed */}

@@ -15,7 +15,7 @@ function Banner() {
   
   return (
     <div className=" relative  md:grid md:grid-cols-4 md:h-[476px] w-full   gap-2  md:grid-flow-row-dense p-2 text-xs md:mb-28  overflow-hidden">
-      <div className="col-span-1 bg-white md:rounded-md p-2 shadow-md z-40">
+      <div className="col-span-1 bg-white md:rounded-md p-2 shadow-md z-40 ">
         <nav>
           <div
             className="mb-4 py-1 pl-1 font-bold cursor-pointer"
@@ -31,7 +31,7 @@ function Banner() {
       </div>
 
       <div className="col-span-2  grid grid-flow-row-dense grid-rows-6 gap-2 h-full ">
-        <div className="row-span-1 bg-white p-2 rounded-md  shadow-md ">
+        <div className="row-span-1 bg-white p-2 rounded-md  shadow-md  hidden md:block">
           menu
         </div>
         <div className="row-span-3 bg-slate-300 md:rounded-md overflow-hidden  shadow-md ">
@@ -60,12 +60,12 @@ function Banner() {
             src={promo}
             layout="responsive"
             objectFit="cover"
-            height={700}
+            height={900}
           />
         </div>
       </div>
 
-      <div className="col-span-1 bg-white md:rounded-md p-2 shadow-md">
+      <div className="col-span-1 bg-white md:rounded-md p-2 shadow-md hidden md:block">
         right
       </div>
 
