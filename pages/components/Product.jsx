@@ -11,10 +11,10 @@ function Product({ id, title, price, description, category, image, url }) {
   return (
     <div
       className="hover:bg-pink-400 hover:transition hover:duration-150
-    hover:ease-out pl-[1px] pr-[1px] pt-[1px] pb-10 m-2 rounded-b-md cursor-pointer"
+    hover:ease-out pl-[1px] pr-[1px] pt-[1px] pb-10 m-2 rounded-b-md cursor-pointer group  overflow-hidden grid grid-rows-8"
     >
       <div
-        className=" relative flex flex-col   bg-white z-30 p-5  space-y-2 group rounded-b-md "
+        className=" relative flex flex-col   bg-white z-30 p-5  space-y-2 group row-span-7  "
         onClick={url}
       >
         <div className="flex flex-row  text-xs   ">
@@ -60,10 +60,10 @@ function Product({ id, title, price, description, category, image, url }) {
         Add to Basket
       </button> */}
       </div>
-      <button className="mt-auto button  hidden group-hover:block   ">
-        {" "}
-        Add to Basket
-      </button>
+      <div className="mt-auto text-xs  hidden group-hover:grid     h-1/6 w-full  grid-cols-2 grid-flow-row  text-white row-span-1">
+        <button className="col-span-1 bg-slate-400 ">Buy</button>
+        <button className="col-span-1 ">Cart</button>
+      </div>
     </div>
   );
 }
