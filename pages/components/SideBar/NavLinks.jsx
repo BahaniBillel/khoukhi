@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { links } from "./Mylinks";
+import { links } from "./MyLinks";
 import NavigationBanner from "../../images/banner-navigation2.png";
 import Image from "next/image";
 
