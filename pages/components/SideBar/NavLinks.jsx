@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import  Link  from "next/link";
+import Link from "next/link";
 import { links } from "./Mylinks";
 import NavigationBanner from "../../images/banner-navigation2.png";
 import Image from "next/image";
-
 
 const NavLinks = () => {
   const [heading, setHeading] = useState("");
@@ -11,8 +10,7 @@ const NavLinks = () => {
   return (
     <>
       {links.map((link) => (
-        <div>
-
+        <div key={link.name}>
           {/* Desktop menu */}
           <div className="px-3 text-left md:cursor-pointer group">
             <h1
@@ -22,8 +20,7 @@ const NavLinks = () => {
                 setSubHeading("");
               }}
             >
-              
-              {link.icon} 
+              {link.icon}
               {link.name}
               <span className="text-xl md:hidden inline">
                 <ion-icon
@@ -47,9 +44,8 @@ const NavLinks = () => {
                   </div>
                   <div className="bg-white p-5 grid grid-cols-10 gap-10 ">
                     {link.sublinks.map((mysublinks) => (
-                      <div>
+                      <div key={mysublinks.sublink}>
                         <h1 className="text-sm font-semibold border border-b-1  border- border-solid">
-                          
                           {mysublinks.Head}
                         </h1>
                         {mysublinks.sublink.map((slink) => (
@@ -65,23 +61,17 @@ const NavLinks = () => {
                       </div>
                     ))}
                     <div className=" col-span-8 bg-white">
-                    <Image src={NavigationBanner} alt="Vercel Logo" layout="responsive" />
+                      <Image
+                        src={NavigationBanner}
+                        alt="Vercel Logo"
+                        layout="responsive"
+                      />
                     </div>
                   </div>
                 </div>
               </div>
             )}
           </div>
-
-
-
-
-
-
-
-
-
-
 
           {/* Mobile menus */}
           <div
@@ -128,9 +118,6 @@ const NavLinks = () => {
               </div>
             ))}
           </div>
-
-
-
         </div>
       ))}
     </>
