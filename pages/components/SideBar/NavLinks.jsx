@@ -49,7 +49,10 @@ const NavLinks = () => {
                           {mysublinks.Head}
                         </h1>
                         {mysublinks.sublink.map((slink) => (
-                          <li className="text-xs text-gray-600 my-2.5">
+                          <li
+                            className="text-xs text-gray-600 my-2.5"
+                            key={slink.link}
+                          >
                             <Link
                               href={slink.link}
                               className="hover:text-primary"
@@ -81,7 +84,7 @@ const NavLinks = () => {
           >
             {/* sublinks */}
             {link.sublinks.map((slinks) => (
-              <div>
+              <div key={slinks.sublink}>
                 <div>
                   <h1
                     onClick={() =>
@@ -109,7 +112,7 @@ const NavLinks = () => {
                     }`}
                   >
                     {slinks.sublink.map((slink) => (
-                      <li className="py-3 pl-14">
+                      <li className="py-3 pl-14" key={slink.link}>
                         <Link href={slink.link}>{slink.name}</Link>
                       </li>
                     ))}
