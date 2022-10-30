@@ -57,6 +57,7 @@ function Banner() {
             layout="responsive"
             objectFit="cover"
             height={900}
+            alt="some phone"
           />
         </div>
       </div>

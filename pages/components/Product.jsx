@@ -23,7 +23,13 @@ function Product({ id, title, price, description, category, image, url }) {
         </div>
 
         <div className="w-full   ">
-          <Image src={image} height={300} width={300} objectFit="contain" />
+          <Image
+            src={image}
+            height={300}
+            width={300}
+            objectFit="contain"
+            alt="om"
+          />
         </div>
 
         {/* <div className="relative  flex-col space-y-5 group  ">

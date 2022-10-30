@@ -221,6 +221,7 @@ export default function Example() {
                                   src={item.imageSrc}
                                   alt={item.imageAlt}
                                   className="object-cover object-center"
+                                  alt="peple"
                                 />
                               </div>
                               <a
@@ -308,6 +309,7 @@ export default function Example() {
                       src="https://tailwindui.com/img/flags/flag-canada.svg"
                       alt=""
                       className="block h-auto w-5 flex-shrink-0"
+                      alt="lopp"
                     />
                     <span className="ml-3 block text-base font-medium text-gray-900">
                       CAD
@@ -348,7 +350,7 @@ export default function Example() {
                   <img
                     className="h-8 w-auto"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt=""
+                    alt="some logo"
                   />
                 </a>
               </div>
@@ -403,6 +405,7 @@ export default function Example() {
                                               src={item.imageSrc}
                                               alt={item.imageAlt}
                                               className="object-cover object-center"
+                                              alt="yopp"
                                             />
                                           </div>
                                           <a
@@ -503,6 +506,7 @@ export default function Example() {
                       src="https://tailwindui.com/img/flags/flag-canada.svg"
                       alt=""
                       className="block h-auto w-5 flex-shrink-0"
+                      alt="geo"
                     />
                     <span className="ml-3 block text-sm font-medium">CAD</span>
                     <span className="sr-only">, change currency</span>
