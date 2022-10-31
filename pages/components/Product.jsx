@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { StarIcon } from "@heroicons/react/24/solid";
 import ReactStars from "react-rating-stars-component";
+import { HomeIcon, TrophyIcon, WrenchIcon } from "@heroicons/react/24/outline";
 
 function Product({ id, title, price, description, category, image, url }) {
   const ratingChanged = (newRating) => {
